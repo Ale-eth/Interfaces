@@ -9,42 +9,40 @@
     <style>
         @import url('https://fonts.cdnfonts.com/css/super-pixel');
     </style>
-     <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
-    <title>Inicia Sesión</title>
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <title>Registro</title>
 </head>
 
 <body>
-<div class="contenedorLogin">
+    <div class="registro">
+        <h1><font color="#E63946">Retro Gemas</font></h1>
+        <div class="formularioRegistro">
+            <h3>Registrate</h3>
+            <p class="obligatorio">*Datos obligatorios</p>
+            <form>
+                <label for="fname">Nombre*</label><label for="lname">Apellido*</label><br>
+                <input type="text" id="fname" name="fname"><input type="text" id="lname" name="lname"><br>
+                <label for="nickname">Nickname</label><br>
+                <input type="text" id="nickname" name="nickname"><br>
+                <label for="edad">Edad*</label> <label for="mail">Correo electrónico*</label><br>
+                <input type="number" id="edad" name="edad"><input type="text" id="mail" name="mail"><br>
+                <label for="contraseña">Contraseña*</label><br>
+                <input type="text" id="contraseña" name="contraseña"><br>
+                <label for="repetircontraseña">Repetir contraseña*</label><br>
+                <input type="text" id="repetircontraseña" name="repetircontraseña"><br>
+                <div class="captcha">
+                    <div class="cuadrado">
 
-        <div class="FormIS">
-            <h1 class="retrogemas">Retro Gemas</h1>
-            <h2>Queres unirte a Retro Gemas?</h2>
-            <div class="g-signin2" data-width="300" data-height="200" data-longtitle="true"></div>
-            <div id="fb-root"></div>
-            <script async defer crossorigin="anonymous"
-                src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v20.0"></script>
-            <div class="fb-login-button" data-width="" data-size="" data-button-type="" data-layout=""
-                data-auto-logout-link="false" data-use-continue-as="false">
-            </div>
-            <h2>------------------------------------o---------------------------------------------------</h2>
-            <button>Registrate</button>
-            <h2>Ya tienes cuenta en Retro Gemas?</h2>
-            <button>Inicia Sesión</button>
-                
+                    </div>
+                    <p>No soy un robot</p>
+                    <img src="" alt="">
+                </div>
+                <button>Registrarme</button>
+              </form>
         </div>
-
-    <figure>
-        <div class="imageJostick">
-            <img src="assets/images/jostick.png" alt="jostick">
-        </div>
+    </div>
     
-        <div class="imageJostick">
-            <img src="assets/images/jostick.png" alt="jostick">
-        </div>
-    </figure>
-</div>
 
-  
 <footer>
     <div class="sobreRetrogemas">
         <h1 class="retrogemas">Sobre <font color="#E63946"> Retro Gemas
