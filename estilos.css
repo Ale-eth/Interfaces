@@ -12,6 +12,7 @@ body{
 .icons{
     width: 60px;
     height: 60px;
+    color: white;
 }
 
 
@@ -41,7 +42,7 @@ body{
     /* Windows (no anda todavia)*/
     .retrogames{
         font-family: 'SuperPixel';
-        src: url('assets/fonts/SuperPixel.ttf') format('ttf'); 
+        src: url('/assets/fonts/SuperPixel.ttf') format('ttf'); 
         font-weight: normal;
         font-style: normal;
     }
