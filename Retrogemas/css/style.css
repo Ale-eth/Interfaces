@@ -1863,6 +1863,8 @@ li:hover {
     display: flex;
     width: 100%;
     transition: transform 0.5s ease; /*agrega una transicion suave*/
+    justify-content: center;
+    align-items: center;
 }
 
 .btn-left-cards {
@@ -2088,6 +2090,7 @@ label {
     background-color: #271010;
     background-size: cover;
     overflow: hidden; 
+    margin: auto;
 
 }
 .carrusel {
