@@ -40,12 +40,27 @@
                     </div>
                     <div class="espacioInput">
                         <label for="contraseña">Contraseña*</label><br>
-                        <input class="inputForm" id="contraseña" name="contraseña"placeholder="Ingrese su contraseña" type="password" minlength="6" required><br>
+                        <input class="inputForm" id="contraseña" name="contraseña" placeholder="Ingrese su contraseña" type="password" minlength="6" required>
+                        <label class="show-password-label">
+                            <input type="checkbox" onclick="togglePassword('contraseña')"> Mostrar contraseña
+                        </label>
+                        <br>
                     </div>
+                    
                     <div class="espacioInput">
-                        <div class="labelflex"><label><span id="labelerror">Repetir Contraseña *</span></label> <div class="diverrorcontravis"></div><img src="imgs/iconos/errorform.png" class="icoerrorhidden"></div> 
-                        <input class="inputForm contraseñaerror" placeholder="Repita su contraseña" type="password" minlength="6"  name="password2" required>
+                        <div class="labelflex">
+                            <label><span id="labelerror">Repetir Contraseña *</span></label>
+                            <div class="diverrorcontravis"></div>
+                            <img src="imgs/iconos/errorform.png" class="icoerrorhidden">
+                        </div>
+                        <input class="inputForm contraseñaerror" id="password2" placeholder="Repita su contraseña" type="password" minlength="6" name="password2" required>
+                        <label class="show-password-label">
+                            <input type="checkbox" onclick="togglePassword('password2')"> Mostrar contraseña
+                        </label>
                     </div>
+                    
+                    
+                    
                
                     
                     <div class="btn-captcha-container">

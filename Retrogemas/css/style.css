@@ -204,6 +204,11 @@ button {
 .footerhome div ul {
     display: none;
 }
+
+.footerhome{
+    padding-left: 5%;
+}
+
 .footerhome div ul.show {
     display: block;
     color: var(--blanco);
@@ -418,6 +423,20 @@ main {
     size: 20px;
    
 }
+.show-password-label {
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.show-password-label input[type="checkbox"] {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+
 .retrogemas h1{
     text-align: left;
     color: #E63946;
@@ -489,6 +508,9 @@ button a {
     color: var(--blanco);
     width: auto;
     height: 1.3125rem;
+}
+label{
+    color: var(--blanco);
 }
 .lineaingresar {
     display: inline-block;
@@ -593,6 +615,19 @@ color: 000;
     background-color: var(--acento-luz);
     border-radius: 0.5em;
 }
+.show-password-label {
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.show-password-label input[type="checkbox"] {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
 
 .btn-captcha-container button {
     background-color:white;
@@ -611,6 +646,7 @@ a.colorblanco{
     height: 2.8125rem;
     background-color: var(--acento-luz);
     border: 0;
+    color: var(--blanco);
 }
 
 
@@ -667,6 +703,7 @@ a.colorblanco{
 /* Seccion Juego */
 
 .main-game-container {
+    max-width: 1340px;
     width: 100%;
     height: auto;
     background-color: #271010;  /* Variable: acento v3*/
@@ -850,8 +887,8 @@ li:hover {
 }
 
 .imgsGameJuego img {
-    width: 23%;
-    height: 12.63019em;
+    width: 23.5%;
+    height: 10em;
 }
 .videosJuego {
     margin-top: 10px;
@@ -1159,6 +1196,7 @@ li:hover {
     justify-content: space-between;
     align-items: center;
     margin-top: 1em;
+    padding-left: 2%;
 }
 
 .cj1Reseña img {
@@ -1209,6 +1247,7 @@ li:hover {
     text-align: left;
     display: flex;
     justify-content: center;
+    padding-left: 2%;
 }
 
 .cj2Reseña p {
@@ -2229,6 +2268,10 @@ button {
 
 /* nav responsive */
 
+.navheader{
+    max-width: 1340px;  
+}
+
 .primariosombra2{
     background-color: rgba(57, 49, 49, 1);
 }
@@ -2325,6 +2368,7 @@ button {
 /*footer responsive*/
 
 .footerhome{
+    max-width: 1340px;
     display: flex;
     flex-direction: row;
     height: 12em;
@@ -2858,7 +2902,7 @@ button {
 }
 /* iniciar sesion */
 .inicio-container{
-    width: 1440px;
+    width: 100%;
     height: 700px;
     display: flex;
     background-image: url(../asset/images/fondo.png);
@@ -2886,13 +2930,17 @@ button {
     margin-left: 1em;
     width: 400px;
     height: 300px;
-    background-color: #746464;
+ 
     border-radius: 2%;
     padding: 4%;
     margin-top: 2px;
 }
 .form-inicio label{
-    color:#000;
+    color:var(--blanco);
+}
+
+.emailInput{
+    padding-bottom: 20px;
 }
 
 .retrogema-logo-inicio{
@@ -2943,14 +2991,15 @@ button {
     align-items: center;
     justify-content: center;
     font-family: Roboto;
-    font-size: 20px;
+    font-size: normal;
     margin-bottom: 1.5em;
     color: var(--blanco);
   }
 .olvidasteContraseña{
     text-decoration: underline;
-    color: #000;
-    padding-bottom: 10px;
+    color: var(--blanco);
+    padding-bottom: 20px;
+    padding-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2973,20 +3022,21 @@ button {
 }
 .registro-container{
     background-color:#261818;
-    width: 700px;
-    height: 950px;
+    width: 520px;
+    height: 820px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 .formularioRegistro{
-    background-color: #746464;
+    background-color:#3B3131;
+    border: #000 1px;
     display: flex;
     flex-direction: column;
     justify-content:center;
     width: 389px;
-    height: 650px;
+    height: 680px;
     padding-left: 10px;
   }
   .tituloRegistrate{
@@ -3001,6 +3051,7 @@ button {
   display: flex;
   padding-bottom: 20px;
   font-size: 25px;
+  color: var(--blanco);
 }
   #fname {
     width: 175px;
@@ -3047,7 +3098,7 @@ button {
   }
   .obligatorio{
     text-align: left;
-    color:#FB2020;
+    color:var(--blanco);
     font-size: 18px;
   }
   .btn-captcha-container{
@@ -3083,9 +3134,10 @@ button {
     margin-top: 2px;
 }
 .texto {
-    color: white;
+    color: black;
     font-size: robotic;
 }
+
 .diverror {
     background-color: red;
 }
@@ -3137,30 +3189,60 @@ background-color: #A12831;
     text-align: left;
    
 }
-
-/* Estilos del fondo del pop-up */
+/*popup*/
 .popup {
     position: fixed;
-    left: 40%;
-    top: 30%;
-    width: 30%;
-    height: 30%;
-    background-color: rgba(0, 0, 0, 0.5);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el popup */
+    width: 35vw; /* Tamaño más pequeño */
+    height: 10vh;
+    background-color: var(--prim); /* Color de fondo */
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 100;
+    z-index: 9999; /* se asegura de que esté encima de otros elementos */
+    padding: 0; /* Sin padding adicional */
+    border-radius: 20px; /* Redondea bordes del popup */
 }
-/*pop-up*/
-/* Estilos del contenido del pop-up */
+
+/* Estilos del contenido del popup */
 .popup-content {
-    background-color:black;
+    background-color: var(--acentonuevo);
+    opacity: 0.8;
     color: var(--blanco);
     font-size: 18px;
-    padding: 20px;
+    padding: 15px;
     border-radius: 5px;
-    width: 300px;
+    width: 100%; /* Ocupa todo el ancho del popup */
+    height: 100%; /* Ocupa todo el alto del popup */
     text-align: center;
+    box-sizing: border-box; /* Incluye padding dentro de width y height */
+}
+
+
+#popup-success {
+    background-color: #e0f7e0;
+    border: 1px solid #28a745;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 10px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.check-icon {
+    font-size: 1.5em;
+    color: #28a745;
+}
+
+.hidden {
+    display: none;
 }
 
 /* Botón de cerrar */

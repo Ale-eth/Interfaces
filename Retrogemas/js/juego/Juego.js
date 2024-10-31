@@ -712,36 +712,58 @@ function EstaEnTablero(ficha){
 }
 
 //coloca las fichas desde que se tiran arriba del tablero hacia abajo en la ubicacion en la que debe ir.
-function setearPosicion(nueva,col,fila){
-   
-    let duracion = 600; //velocidad de la animacion
+function setearPosicion(nueva, col, fila) {
+    let duracion = 600; // Velocidad de la animación
     const fichaTablero = fichastablero[col][fila];
     const posXInicial = nueva.getPosX();
     const posYInicial = nueva.getPosY();
     const posXFinal = fichaTablero.getPosX();
     const posYFinal = fichaTablero.getPosY();
-    const pasos = 60; // iteraciones de la animacion
+    const pasos = 60; // Iteraciones de la animación
     const intervalo = duracion / pasos; // Intervalo entre pasos
 
     let paso = 0;
+    let reboteActivo = false; // Marca para saber si estamos en la fase de rebote
+    let alturaRebote = 50; // Altura del rebote inicial
 
     const animacionInterval = setInterval(() => {
-        if (paso >= pasos) { // si paso es mayor al maximo de pasos
-            clearInterval(animacionInterval); // limpia el intervalo
-            nueva.setPosX(posXFinal); //setea las posiciones
-            nueva.setPosY(posYFinal);
-            nueva.setMovible(false); //lo inserta en el tablero
-            nueva.draw(); //dibuja la ultima caida
-            limpiarTodoCanvas(); //limpia el canvas
-        } else {
+        if (paso >= pasos && !reboteActivo) { // Si completó la caída y aún no rebota
+            reboteActivo = true; // Activamos el rebote
+            paso = 0; // Reiniciamos los pasos para la fase de rebote
+        }
+
+        if (reboteActivo) { // Fase de rebote
+            if (alturaRebote < 2) { // Si el rebote es muy pequeño, detiene la animación
+                clearInterval(animacionInterval);
+                nueva.setPosX(posXFinal);
+                nueva.setPosY(posYFinal);
+                nueva.setMovible(false);
+                nueva.draw();
+                limpiarTodoCanvas();
+            } else {
+                paso++;
+                const progresoRebote = paso / pasos;
+                const posYRebote = posYFinal - Math.abs(Math.sin(progresoRebote * Math.PI)) * alturaRebote;
+                
+                nueva.setPosY(posYRebote);
+                nueva.draw();
+                limpiarTodoCanvas();
+
+                if (progresoRebote >= 1) { // Si un rebote completo ha terminado
+                    paso = 0; // Reinicia el paso para el siguiente rebote
+                    alturaRebote *= 0.5; // Reduce la altura del siguiente rebote
+                }
+            }
+        } else { // Fase de caída
             paso++;
-            const progreso = paso / pasos; // va midiendo cuanto progresa la animacion
-            const posXAnimacion = posXInicial + (posXFinal - posXInicial) * progreso; // suma la posx inicial le suma la diferencia entre 
-            const posYAnimacion = posYInicial + (posYFinal - posYInicial) * progreso; // la posxfinal y la inicial y multiplica por la cantidad de progreso.
-            nueva.setPosX(posXAnimacion); // setea las posiciones
+            const progreso = paso / pasos;
+            const posXAnimacion = posXInicial + (posXFinal - posXInicial) * progreso;
+            const posYAnimacion = posYInicial + (posYFinal - posYInicial) * progreso;
+
+            nueva.setPosX(posXAnimacion);
             nueva.setPosY(posYAnimacion);
-            nueva.draw(); // dibuja
-            limpiarTodoCanvas(); //limpia el canvas
+            nueva.draw();
+            limpiarTodoCanvas();
         }
     }, intervalo);
 }

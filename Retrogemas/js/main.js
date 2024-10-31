@@ -35,7 +35,7 @@ function registrar(e) { //paso x parametros el evento de submit}
     }
     if ((pass == pass2) && (!estaRegistrado(user)) && captchacompletado) {
         usuarios.push(user);
-        mostrarPopup("Se ha registrado con exito");
+        mostrarPopup('<span class="check-icon">✔️</span> Se ha registrado con éxito');
         setTimeout("redireccionar()", 3000);
     }
     else {
@@ -43,17 +43,17 @@ function registrar(e) { //paso x parametros el evento de submit}
             diverror.innerHTML = " ";
             diverror.classList.add("diverrorvisible");
             registrocorrecto.classList.remove("pulse");
-            mostrarPopup("El usuario ya existe");
+            mostrarPopup('<span class="error-icon">❌</span> El usuario ya existe');
         }
         else {
             passerror.innerHTML = " ";
-            mostrarPopup("Las contraseñas no coinciden");
+            mostrarPopup('<span class="error-icon">❌</span> Las contraseñas no coinciden');
         }
     }
 }
 function mostrarPopup(mensaje) {
     // Busca el elemento donde irá el mensaje y actualiza su contenido
-    document.getElementById("popup-message").textContent = mensaje;
+    document.getElementById("popup-message").innerHTML = mensaje;
 
     // Muestra el pop-up quitando la clase "hidden"
     document.getElementById("popup-error").classList.remove("hidden");
@@ -91,6 +91,11 @@ function captchacompletado() {
     completo = true;
     return completo
 }
+function togglePassword(id) {
+    const passwordField = document.getElementById(id);
+    passwordField.type = passwordField.type === "password" ? "text" : "password";
+}
+
 
 
 

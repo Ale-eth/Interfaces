@@ -2053,10 +2053,15 @@ label {
 .main {
     height: 100%;
     width: 100%;
+    max-width: 1340px;
     background-color: #271010;
     background-size: cover;
     overflow: hidden; 
 
+}
+
+.navheader{
+    max-width: 1340px;  
 }
 .carrusel {
     display: flex;
@@ -2298,6 +2303,7 @@ button {
 /*footer responsive*/
 
 .footerhome{
+    max-width: 1340px;
     display: flex;
     flex-direction: row;
     height: 12em;
