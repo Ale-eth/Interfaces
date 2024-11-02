@@ -229,6 +229,7 @@ button {
     height: 100%;
     overflow: hidden; 
     background-color: #261818;
+    position:relative
 }
 .carruselcompleto {
     width: 100%;
@@ -1855,7 +1856,7 @@ li:hover {
 
 
 .primero {
-    top: 25em;
+    top: 32.5em;
 }
 
 .segundo {
@@ -1963,20 +1964,21 @@ li:hover {
 
 
 .primero {
-    top: 40em;
+    top: 32.5em; /* Nuevo valor */
 }
 
 .segundo {
-    top: 66em;
+    top: 58.5em; /* 32.5em + 26em */
 }
 
 .tercero {
-    top: 92em;
+    top: 84.5em; /* 58.5em + 26em */
 }
 
 .cuarto {
-    top: 118em;
-} 
+    top: 110.5em; /* 84.5em + 26em */
+}
+ 
 
 
 /* clases animaciones botones izq der carrusel cards */
