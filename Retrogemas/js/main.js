@@ -97,6 +97,32 @@ function togglePassword(id) {
 }
 
 
+// boton rebelde
+        // Selecciona el botón usando la clase
+        let button = document.querySelector(".btn-right-cards");
+        let lastWidth = window.innerWidth;
 
+        // Bucle infinito para ajustar posición del botón
+        function adjustButtonPosition() {
+            let currentWidth = window.innerWidth;
+
+            // Mueve el botón en función del cambio en el ancho de la ventana
+            if (currentWidth < lastWidth) {
+                // Si hay zoom out (menos ancho)
+                button.style.right = `${parseInt(button.style.right) + 5}px`;
+            } else if (currentWidth > lastWidth) {
+                // Si hay zoom in (más ancho)
+                button.style.right = `${Math.max(parseInt(button.style.right) - 5, 10)}px`;
+            }
+
+            // Actualiza el último ancho registrado
+            lastWidth = currentWidth;
+
+            // Ejecuta nuevamente el ajuste después de un pequeño retraso
+            setTimeout(adjustButtonPosition, 100);
+        }
+
+        // Inicia el ajuste de la posición del botón
+        adjustButtonPosition();
 
 

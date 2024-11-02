@@ -1936,13 +1936,18 @@ li:hover {
     height: 3em;
 }
 
-.btn-right-cards{
+/* Estilo base */
+.btn-right-cards {
     position: absolute;
     z-index: 100;
     right: 1em;
     width: 3em;
     height: 3em;
+    transition: transform 0.3s, right 0.3s;
 }
+
+
+
 
 
 .btn-left-cards img {
