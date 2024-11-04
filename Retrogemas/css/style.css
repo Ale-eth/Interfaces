@@ -636,7 +636,6 @@ color: 000;
 
 .colorblanco {
     color: var(--blanco);
-    margin-left: 2em;
 }
 a.colorblanco{
     text-decoration:underline;
