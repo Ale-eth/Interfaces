@@ -2200,7 +2200,7 @@ label {
     height: 16em;
     position: absolute;
     top:  4.8125rem;
-    /* left: 21.7em; */
+    left: 69.85em;
     display: flex;
     padding: 0.5em 0.5em 2.5em 1.5em;
     text-align: left;
@@ -2232,7 +2232,7 @@ label {
     height: 7rem;
     position: absolute;
     top:  4.8125rem;
-    /* right: 10%; */
+    left: 66em;
     right: 8%;
     display: flex;
     font-size: medium;
