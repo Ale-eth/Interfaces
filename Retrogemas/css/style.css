@@ -145,7 +145,7 @@ button {
     
 }
 .perfil, .carrito{
-    width: 50%;
+    width: auto;
     height: 50%;
     text-align: right;
 }
@@ -846,6 +846,8 @@ li:hover {
     display: flex;
     justify-content: center;
     width: 100%;
+    background-color: rgb(2, 9, 16);
+    padding-bottom:30px;
    
 }
 
@@ -1558,15 +1560,15 @@ li:hover {
 }
 
 .perfilDesplegado.show, .carritoDesplegado.show, .hamburguer-menu-desplegado.show {
-      padding: 0.1em;
-      width: auto;
-      height: auto;
-      background-color: rgba(57, 49, 49, 1);
-      position: absolute;
-      top: 3.5rem;
-      display: flex;
-      z-index: 3;
-      color: var(--blanco);
+    padding: 0.1em;
+    width: 8.5rem;
+    height: 7rem;
+    background-color: rgba(57, 49, 49, 1);
+    position: absolute;
+    top: 4.8125rem;
+    display: flex;
+    z-index: 3;
+    color: var(--blanco);
 }
 
 .perfilDesplegado.show {
@@ -2226,19 +2228,19 @@ label {
     
 }
 
-.carritoDesplegado.show {
-    opacity: 0.9;
-    width: 8.5rem;
-    height: 7rem;
+.perfilDesplegado.show {
+    width: 10em;
+    height: 16em;
     position: absolute;
     top:  4.8125rem;
-    left: 66em;
-    right: 8%;
+    left: 69.5rem;
     display: flex;
-    font-size: medium;
-    padding: 0.5em 0.5em 0.5em 0.8em;
-    align-items: center;
+    padding: 0.5em 0.5em 2.5em 1.5em;
+    background-color: rgba(57, 49, 49, 1);
     text-align: left;
+    align-items: center;
+    opacity: 0.9;
+    justify-content: center;
     z-index: 3;
 } 
 
@@ -2349,7 +2351,6 @@ button {
 .titulo h1 {
    font-size: 2em;
 }
-
 
 
 
@@ -3418,7 +3419,7 @@ background-color: #A12831;
 
 
 .elegirpersonajes{
-    background-color: #261818;
+    background-color: rgb(2, 9, 16);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -3430,7 +3431,7 @@ background-color: #A12831;
 }
 
 .tablerojuego{
-    background-color: #271010;
+    background-color: rgb(2, 9, 16);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;

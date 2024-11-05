@@ -3010,7 +3010,7 @@ button {
 
 .registro{
     background-image: url(../asset/images/fondo-registro.png);
-    background-size:contain;
+    background-size:cover;
     width: auto;
     height: 1161px;
     display: flex;

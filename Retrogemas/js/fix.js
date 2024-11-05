@@ -8,6 +8,7 @@ const button5el = document.getElementById("5enlinea");
 const button6el = document.getElementById("6enlinea");
 const button7el = document.getElementById("7enlinea");
 
+
 button4el.addEventListener("click", function() {
     container.style.backgroundColor = "rgb(2, 9, 16)";
 });
@@ -23,6 +24,9 @@ button6el.addEventListener("click", function() {
 button7el.addEventListener("click", function() {
     container.style.backgroundColor = "rgb(2, 9, 16)";
 });
+
+
+
 
 
 
